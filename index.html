@@ -1,141 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Atul Deshpande</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Atul Deshpande - AI Research Portfolio | Low-Resource NLP, Information Retrieval, Medical AI"/>
+  <title>Atul Deshpande | Research Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<header>
-<h1>Atul Deshpande</h1>
-<p>AI Engineer | LLM Systems | MLOps</p>
-<a href="https://github.com/AtulDeshpande09">GitHub</a>
-<a href="www.linkedin.com/in/atul-deshpande-504898271">LinkedIn</a>
-</header>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="logo">
+        <a href="#">Atul Deshpande</a>
+      </div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<section class="about">
-<h2>About Me</h2>
-<p>
-Final-year Computer Science undergraduate specializing in efficient LLM systems
-and reliable AI deployment. Experienced in building production-grade RAG pipelines,
-benchmarking parameter-efficient fine-tuning techniques, and deploying models
-on cloud GPU infrastructure.
-</p>
-</section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Atul Deshpande</h1>
+      <p class="hero-subtitle">
+        Recent graduate focused on low-resource natural language processing, information retrieval, 
+        and applied artificial intelligence in healthcare. Committed to reproducible research and open science.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View Research</a>
+        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+      </div>
+    </div>
+  </section>
 
-<section class="education">
-<h2>Education</h2>
+  <main class="container">
 
-<div class="card">
-<h3>BTech in Computer Science (AI & ML)</h3>
-<p>KIT’s College of Engineering, Kolhapur</p>
-<p>Oct 2022 – June 2026</p>
-<p>CGPA: 8.5 / 10</p>
-</div>
+    <!-- About Section -->
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>
+        I am a recent graduate with experience spanning natural language processing, 
+        information retrieval, and computational mechanics. My research focuses on developing 
+        efficient, reproducible methods for complex systems, ranging from low-resource language modeling 
+        to diagnostic applications in healthcare.
+      </p>
+      <p>
+        I am currently preparing for Master's degree programs, seeking opportunities to contribute 
+        to research in intelligent systems and applied AI.
+      </p>
+    </section>
 
-<div class="card">
-<p>HSC (12th): 81.33%</p>
-<p>SSC (10th): 95.60%</p>
-</div>
+    <!-- Research Interests (UPDATED SECTION) -->
+    <section id="research" class="section">
+      <h2>Research Interests</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Natural Language Processing</h3>
+          <p>Developing robust language models and evaluation frameworks for low-resource and multilingual contexts, focusing on data-efficient adaptation.</p>
+        </div>
+        <div class="card">
+          <h3>Information Retrieval</h3>
+          <p>Investigating cross-lingual search systems, open benchmark creation, and semantic retrieval architectures using vector databases.</p>
+        </div>
+        <div class="card">
+          <h3>Reasoning in LLMs</h3>
+          <p>Evaluating and enhancing the logical reasoning, factuality, and hallucination mitigation capabilities of Large Language Models.</p>
+        </div>
+        <div class="card">
+          <h3>Medical AI</h3>
+          <p>Applying machine learning methodologies to healthcare challenges, including clinical data processing and predictive modeling.</p>
+        </div>
+      </div>
+    </section>
 
-</section>
+    <!-- Featured Project -->
+    <section id="projects" class="section">
+      <h2>Research Projects</h2>
+      
+      <article class="project-card featured">
+        <header class="project-header">
+          <h3>Marathi-XRetrieve: Cross-Lingual Retrieval Benchmark</h3>
+          <span class="badge">Independent Research</span>
+        </header>
+        
+        <p class="project-meta">Python | BGE-M3 | ChromaDB | PyTorch | Contrastive Learning</p>
+        
+        <p><strong>Objective</strong>: Quantify and address performance gaps in cross-lingual retrieval for Marathi, a low-resource Indic language with over 80 million speakers.</p>
+        
+        <p><strong>Methodology</strong>: Developed a reproducible benchmark with 1,000 Marathi queries over English/Hindi Wikipedia. Evaluated BGE-M3 zero-shot performance and applied contrastive fine-tuning on 1,000 query-chunk pairs.</p>
+        
+        <p><strong>Key Results</strong>:</p>
+        <ul class="results-list">
+          <li>Baseline cross-lingual gap: 7.93 percentage points in Top-1 accuracy (Marathi vs. English queries)</li>
+          <li>Fine-tuning improved Marathi Top-1 accuracy by 2.84 pp (77.36% to 80.20%)</li>
+          <li>Gap reduction: 47.4% with no significant degradation on English performance (-0.92 pp)</li>
+          <li>Comprehensive evaluation using MRR, NDCG@k, and MAP metrics with bootstrap confidence intervals</li>
+        </ul>
 
-<section class="projects">
+        <!-- Results Visualization -->
+        <div class="results-chart">
+          <span class="chart-title">Top-1 Accuracy: Marathi Queries</span>
+          <div class="chart-bars">
+            <div class="bar-group">
+              <div class="bar baseline" style="height: 77px;"></div>
+              <span class="bar-label">Baseline<br><strong>77.4%</strong></span>
+            </div>
+            <div class="bar-group">
+              <div class="bar finetuned" style="height: 80px;"></div>
+              <span class="bar-label">Fine-Tuned<br><strong>80.2%</strong></span>
+            </div>
+            <div class="bar-diff">
+              <span class="diff-badge">+2.8 pp</span>
+            </div>
+          </div>
+        </div>
 
-<h2>Projects</h2>
+        <div class="project-links">
+          <a href="https://github.com/AtulDeshpande09/marathixretrieve" target="_blank" class="btn btn-sm btn-primary">GitHub Repository</a>
+          <a href="https://zenodo.org/records/20335919" target="_blank" class="btn btn-sm btn-secondary">Technical Report (Zenodo)</a>
+          <span class="doi-badge">DOI: 10.5281/zenodo.20335919</span>
+        </div>
+      </article>
 
-<div class="card">
-<h3>LLM Efficiency Benchmarking Framework</h3>
-<p>
-Engineered parameter-efficient fine-tuning pipeline for GPT-2, Phi-2, LLaMA-2 and
-Mistral-7B using cloud GPU infrastructure.
-</p>
+      <!-- Additional Projects -->
+      <div class="projects-grid">
+        
+        <article class="project-card">
+          <header class="project-header">
+            <h3>RAG-Technical-QA</h3>
+          </header>
+          <p class="project-meta">Python | Retrieval-Augmented Generation | Technical Documentation</p>
+          <p>Retrieval-Augmented Generation system for answering technical questions from domain-specific documentation. Implements chunking strategies, embedding selection utilities, and evaluation frameworks for QA tasks.</p>
+          <a href="https://github.com/AtulDeshpande09/rag-technical-qa" target="_blank" class="link-arrow">View Repository</a>
+        </article>
 
-<ul>
-<li>Built automated evaluation pipeline using BLEU, ROUGE-L, BERTScore</li>
-<li>Curated 2K technical QA dataset</li>
-<li>Demonstrated superior sample efficiency of modern architectures</li>
-</ul>
+        <article class="project-card">
+          <header class="project-header">
+            <h3>ChromaDB RAG Template</h3>
+          </header>
+          <p class="project-meta">Python | BGE-M3 | FastAPI | Vector Search</p>
+          <p>Production-ready template for Retrieval-Augmented Generation applications with metadata filtering, fp16 embedding support, and evaluation utilities for multilingual use cases.</p>
+          <a href="#" class="link-arrow">View Repository</a>
+        </article>
 
-<a href="https://github.com/AtulDeshpande09/decoder-only-qa-finetuning">View Project</a>
-</div>
+      </div>
+    </section>
 
-<div class="card">
-<h3>Industrial RAG System for Maintenance Analysis</h3>
-<p>
-Designed a Retrieval-Augmented Generation system for analyzing industrial
-maintenance logs.
-</p>
+    <!-- Research Experience -->
+    <section id="experience" class="section">
+      <h2>Research Experience</h2>
+      
+      <article class="experience-card">
+        <header class="experience-header">
+          <h3>Undergraduate Research Assistant (Computational)</h3>
+          <span class="experience-meta">Department of Mechanical Engineering | August 2025 – December 2025</span>
+        </header>
+        
+        <ul class="experience-list">
+          <li><strong>Model Development and Benchmarking</strong>: Deployed and systematically compared multiple machine learning frameworks—including Linear Regression, Decision Trees, Random Forests, and Artificial Neural Networks—to address a complex multi-output regression problem in manufacturing process optimization.</li>
+          <li><strong>Validation Methodology</strong>: Implemented K-Fold cross-validation and rigorous hyperparameter tuning protocols to ensure robust model generalization and mitigate overfitting on real-world experimental datasets.</li>
+          <li><strong>Feature Analysis</strong>: Conducted feature importance analysis on critical machining parameters (cutting speed, feed rate, depth of cut) to identify primary drivers of system performance and inform process improvements.</li>
+          <li><strong>Interdisciplinary Collaboration</strong>: Partnered with doctoral researchers to translate domain-specific manufacturing parameters into actionable predictive insights, bridging mechanical engineering expertise with machine learning methodology.</li>
+        </ul>
+        
+        <div class="skills-tag-row">
+          <span class="skill-tag">Scikit-learn</span>
+          <span class="skill-tag">K-Fold Cross-Validation</span>
+          <span class="skill-tag">Hyperparameter Optimization</span>
+          <span class="skill-tag">Feature Importance Analysis</span>
+          <span class="skill-tag">Multi-output Regression</span>
+        </div>
+      </article>
+    </section>
 
-<ul>
-<li>Metadata-driven retrieval for contextual answers</li>
-<li>Machine ID and issue-based filtering</li>
-</ul>
+    <!-- Technical Skills -->
+    <section id="skills" class="section">
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>Programming Languages</h4>
+          <p>Python, SQL, Bash, JavaScript (foundational)</p>
+        </div>
+        <div class="skill-category">
+          <h4>Machine Learning & NLP</h4>
+          <p>Hugging Face Transformers, BGE-M3, Contrastive Learning, RAG Architectures, Evaluation Metrics (MRR, NDCG, MAP), Scikit-learn, K-Fold Cross-Validation, Feature Engineering</p>
+        </div>
+        <div class="skill-category">
+          <h4>Models & Frameworks</h4>
+          <p>Linear Regression, Decision Trees, Random Forests, Artificial Neural Networks, PyTorch, ChromaDB, FastAPI</p>
+        </div>
+        <div class="skill-category">
+          <h4>Platforms & Tools</h4>
+          <p>Git/GitHub, Kaggle, Hugging Face, Zenodo, Docker, Jupyter, GitHub Actions, Linux/Unix</p>
+        </div>
+        <div class="skill-category">
+          <h4>Languages</h4>
+          <p>English (fluent), Marathi (native), Hindi (proficient)</p>
+        </div>
+      </div>
+    </section>
 
-<a href="https://github.com/AtulDeshpande09/Smart_Factory_GenAI_Assistant">View Project</a>
-</div>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>
+        I welcome inquiries regarding research collaborations, Master's program opportunities, 
+        or technical discussions related to low-resource NLP, retrieval, and applied AI.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:deshpandeatul05@gmail.com" class="contact-link">Email</a>
+        <a href="https://github.com/AtulDeshpande09" target="_blank" class="contact-link">GitHub</a>
+        <a href="https://www.kaggle.com/atuldeshpande96" target="_blank" class="contact-link">Kaggle</a>
+        <a href="https://huggingface.co/AtulDeshpande" target="_blank" class="contact-link">Hugging Face</a>
+        <a href="#" class="contact-link">Curriculum Vitae (PDF)</a>
+      </div>
+    </section>
 
-<div class="card">
-<h3>Technical Question Answering with LLMs</h3>
+  </main>
 
-<ul>
-<li>Built RAG pipeline using Mistral-7B-Instruct</li>
-<li>MiniLM embeddings with FAISS vector search</li>
-<li>Evaluated RAG vs Fine-tuned systems</li>
-</ul>
-
-<a href="https://github.com/AtulDeshpande09/rag-technical-qa">View Project</a>
-</div>
-
-</section>
-
-<section class="skills">
-
-<h2>Technical Skills</h2>
-
-<div class="skills-grid">
-
-<div>
-<h3>Languages & Frameworks</h3>
-<p>Python, PyTorch, Transformers, JAX, SQL</p>
-</div>
-
-<div>
-<h3>ML & AI</h3>
-<p>LLMs, RAG, LoRA, Quantization, Deep Learning</p>
-</div>
-
-<div>
-<h3>MLOps & Cloud</h3>
-<p>Docker, AWS, RunPod, Vast.ai, Linux</p>
-</div>
-
-<div>
-<h3>Data</h3>
-<p>NumPy, Pandas, NLTK, Matplotlib, Seaborn</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="contact">
-
-<h2>Contact</h2>
-
-<p>Email: deshpandeatul05@gmail.com</p>
-<p>GitHub: https://github.com/AtulDeshpande09</p>
-<p>LinkedIn: www.linkedin.com/in/atul-deshpande-504898271</p>
-
-</section>
-
-<footer>
-<p>© 2026 Atul Deshpande</p>
-</footer>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Atul Deshpande. All rights reserved.</p>
+      <p class="footer-note">Last updated: June 2026 | Marathi-XRetrieve v1.0 | DOI: 10.5281/zenodo.20335919</p>
+    </div>
+  </footer>
 
 </body>
 </html>
